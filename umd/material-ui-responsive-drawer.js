@@ -13050,10 +13050,8 @@ var ResponsiveAppBar = function (_Component) {
         width = _props.width,
         openSecondary = _props.openSecondary,
         style = _props.style,
-        showMenuIconButton = _props.showMenuIconButton,
-        onLeftIconButtonTouchTap = _props.onLeftIconButtonTouchTap,
         toggleDrawerOpen = _props.toggleDrawerOpen,
-        rest = _objectWithoutProperties(_props, ['browser', 'responsiveDrawer', 'breackPoint', 'children', 'width', 'openSecondary', 'style', 'showMenuIconButton', 'onLeftIconButtonTouchTap', 'toggleDrawerOpen']);
+        rest = _objectWithoutProperties(_props, ['browser', 'responsiveDrawer', 'breackPoint', 'children', 'width', 'openSecondary', 'style', 'toggleDrawerOpen']);
 
     var props = _extends({}, this.props);
     var setWidth = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__utils_drawerHelper_js__["a" /* default */])(browser, responsiveDrawer, breackPoint);
@@ -13079,9 +13077,7 @@ var ResponsiveAppBar = function (_Component) {
 
     var appBarProps = _extends({
       width: width,
-      style: drawerOnRight ? styles.docked_right : styles.docked_left,
-      showMenuIconButton: showMenuIconButton !== undefined ? showMenuIconButton : !setWidth,
-      onLeftIconButtonTouchTap: onLeftIconButtonTouchTap !== undefined ? onLeftIconButtonTouchTap : toggleDrawerOpen
+      style: drawerOnRight ? styles.docked_right : styles.docked_left
     }, rest);
 
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -13089,7 +13085,7 @@ var ResponsiveAppBar = function (_Component) {
       _extends({}, appBarProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 54
         },
         __self: this
       }),
@@ -13188,7 +13184,7 @@ var ResponsiveDrawer = function (_Component) {
     var drawerP = _extends({
       docked: open ? true : responsiveDrawer.docked,
       open: open ? open : responsiveDrawer.open,
-      onRequestChange: toggleDrawerOpen
+      onRequestClose: toggleDrawerOpen
     }, props);
 
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(

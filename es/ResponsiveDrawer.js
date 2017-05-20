@@ -37,7 +37,7 @@ var ResponsiveDrawer = function (_Component) {
     var drawerP = _extends({
       docked: open ? true : responsiveDrawer.docked,
       open: open ? open : responsiveDrawer.open,
-      onRequestChange: toggleDrawerOpen
+      onRequestClose: toggleDrawerOpen
     }, props);
 
     return React.createElement(

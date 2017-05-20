@@ -16,7 +16,7 @@ class ResponsiveDrawer extends Component {
     const drawerP = {
       docked: open?true:responsiveDrawer.docked,
       open: open?open:responsiveDrawer.open,
-      onRequestChange: toggleDrawerOpen,
+      onRequestClose: toggleDrawerOpen,
       ...props
     };
 

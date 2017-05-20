@@ -16,8 +16,6 @@ class ResponsiveAppBar extends Component {
       width,
       openSecondary,
       style,
-      showMenuIconButton,
-      onLeftIconButtonTouchTap,
       toggleDrawerOpen,
       ...rest
     } = this.props
@@ -48,8 +46,6 @@ class ResponsiveAppBar extends Component {
     const appBarProps = {
       width,
       style: drawerOnRight?styles.docked_right:styles.docked_left,
-      showMenuIconButton: showMenuIconButton!==undefined?showMenuIconButton:!setWidth,
-      onLeftIconButtonTouchTap: onLeftIconButtonTouchTap!==undefined?onLeftIconButtonTouchTap:toggleDrawerOpen,
       ...rest
     };
 

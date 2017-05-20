@@ -33,10 +33,8 @@ var ResponsiveAppBar = function (_Component) {
         width = _props.width,
         openSecondary = _props.openSecondary,
         style = _props.style,
-        showMenuIconButton = _props.showMenuIconButton,
-        onLeftIconButtonTouchTap = _props.onLeftIconButtonTouchTap,
         toggleDrawerOpen = _props.toggleDrawerOpen,
-        rest = _objectWithoutProperties(_props, ['browser', 'responsiveDrawer', 'breackPoint', 'children', 'width', 'openSecondary', 'style', 'showMenuIconButton', 'onLeftIconButtonTouchTap', 'toggleDrawerOpen']);
+        rest = _objectWithoutProperties(_props, ['browser', 'responsiveDrawer', 'breackPoint', 'children', 'width', 'openSecondary', 'style', 'toggleDrawerOpen']);
 
     var props = _extends({}, this.props);
     var setWidth = isResponsiveAndOverBreackPoint(browser, responsiveDrawer, breackPoint);
@@ -62,9 +60,7 @@ var ResponsiveAppBar = function (_Component) {
 
     var appBarProps = _extends({
       width: width,
-      style: drawerOnRight ? styles.docked_right : styles.docked_left,
-      showMenuIconButton: showMenuIconButton !== undefined ? showMenuIconButton : !setWidth,
-      onLeftIconButtonTouchTap: onLeftIconButtonTouchTap !== undefined ? onLeftIconButtonTouchTap : toggleDrawerOpen
+      style: drawerOnRight ? styles.docked_right : styles.docked_left
     }, rest);
 
     return React.createElement(
