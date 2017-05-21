@@ -1,5 +1,5 @@
 /*!
- * material-ui-responsive-drawer v1.1.21 - https://tarikhuber.github.io/material-ui-responsive-drawer
+ * material-ui-responsive-drawer v1.1.22 - https://tarikhuber.github.io/material-ui-responsive-drawer
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
