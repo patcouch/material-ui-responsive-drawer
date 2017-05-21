@@ -24,6 +24,8 @@ class ResponsiveAppBar extends Component {
     } = this.props
     const props={...(this.props)};
     const setWidth= isResponsiveAndOverBreackPoint(browser, responsiveDrawer, breackPoint);
+    const hideMenuIconButton=isResponsiveAndOverBreackPoint(browser, responsiveDrawer, breackPoint);
+    const iconDisplay=hideMenuIconButton?'none':'inline-flex';
     const drawerWidth=width!==undefined?width:256;
     const drawerOnRight=openSecondary!==undefined?openSecondary:false;
 
@@ -54,7 +56,7 @@ class ResponsiveAppBar extends Component {
 
       <AppBar {...appBarProps}>
         <Toolbar>
-          <IconButton onTouchTap={toggleDrawerOpen} contrast>
+          <IconButton onTouchTap={toggleDrawerOpen} style={styles.iconDisplay} contrast>
             <MenuIcon />
           </IconButton>
           {children}
@@ -74,7 +76,6 @@ ResponsiveAppBar.propTypes = {
   breackPoint: PropTypes.string,
   width: PropTypes.number,
   openSecondary: PropTypes.bool,
-  showMenuIconButton: PropTypes.bool,
   onLeftIconButtonTouchTap: PropTypes.func,
 };
 
