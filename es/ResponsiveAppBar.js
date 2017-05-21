@@ -14,6 +14,9 @@ import { connect } from 'react-redux';
 import { toggleDrawerOpen as _toggleDrawerOpen } from './actions/responsiveDrawer';
 import isResponsiveAndOverBreackPoint from './utils/drawerHelper.js';
 import AppBar from 'material-ui/AppBar';
+import Toolbar from 'material-ui/Toolbar';
+import IconButton from 'material-ui/IconButton';
+import MenuIcon from 'material-ui-icons/Menu';
 
 var ResponsiveAppBar = function (_Component) {
   _inherits(ResponsiveAppBar, _Component);
@@ -45,14 +48,12 @@ var ResponsiveAppBar = function (_Component) {
       docked_left: _extends({
         position: 'fixed',
         width: 'auto',
-        left: setWidth ? drawerWidth : 0,
         top: 0,
         right: 0
       }, style),
       docked_right: _extends({
         position: 'fixed',
         width: 'auto',
-        right: setWidth ? drawerWidth : 0,
         top: 0,
         left: 0
       }, style)
@@ -66,7 +67,16 @@ var ResponsiveAppBar = function (_Component) {
     return React.createElement(
       AppBar,
       appBarProps,
-      children
+      React.createElement(
+        Toolbar,
+        null,
+        React.createElement(
+          IconButton,
+          { onTouchTap: toggleDrawerOpen, contrast: true },
+          React.createElement(MenuIcon, null)
+        ),
+        children
+      )
     );
   };
 
