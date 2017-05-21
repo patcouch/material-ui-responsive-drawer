@@ -43,6 +43,9 @@ class ResponsiveAppBar extends Component {
         top:0,
         left:0,
         ...style
+      },
+      icon_button: {
+        display: iconDisplay
       }
     }
 
@@ -56,7 +59,7 @@ class ResponsiveAppBar extends Component {
 
       <AppBar {...appBarProps}>
         <Toolbar>
-          <IconButton onTouchTap={toggleDrawerOpen} style={styles.iconDisplay} contrast>
+          <IconButton onTouchTap={toggleDrawerOpen} style={styles.icon_button} contrast>
             <MenuIcon />
           </IconButton>
           {children}

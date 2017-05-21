@@ -41,6 +41,8 @@ var ResponsiveAppBar = function (_Component) {
 
     var props = _extends({}, this.props);
     var setWidth = isResponsiveAndOverBreackPoint(browser, responsiveDrawer, breackPoint);
+    var hideMenuIconButton = isResponsiveAndOverBreackPoint(browser, responsiveDrawer, breackPoint);
+    var iconDisplay = hideMenuIconButton ? 'none' : 'inline-flex';
     var drawerWidth = width !== undefined ? width : 256;
     var drawerOnRight = openSecondary !== undefined ? openSecondary : false;
 
@@ -56,7 +58,10 @@ var ResponsiveAppBar = function (_Component) {
         width: 'auto',
         top: 0,
         left: 0
-      }, style)
+      }, style),
+      icon_button: {
+        display: iconDisplay
+      }
     };
 
     var appBarProps = _extends({
@@ -72,7 +77,7 @@ var ResponsiveAppBar = function (_Component) {
         null,
         React.createElement(
           IconButton,
-          { onTouchTap: toggleDrawerOpen, contrast: true },
+          { onTouchTap: toggleDrawerOpen, style: styles.icon_button, contrast: true },
           React.createElement(MenuIcon, null)
         ),
         children
@@ -91,7 +96,6 @@ process.env.NODE_ENV !== "production" ? ResponsiveAppBar.propTypes = {
   breackPoint: PropTypes.string,
   width: PropTypes.number,
   openSecondary: PropTypes.bool,
-  showMenuIconButton: PropTypes.bool,
   onLeftIconButtonTouchTap: PropTypes.func
 } : void 0;
 

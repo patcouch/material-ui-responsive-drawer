@@ -13626,6 +13626,8 @@ var ResponsiveAppBar = function (_Component) {
 
     var props = _extends({}, this.props);
     var setWidth = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__utils_drawerHelper_js__["a" /* default */])(browser, responsiveDrawer, breackPoint);
+    var hideMenuIconButton = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__utils_drawerHelper_js__["a" /* default */])(browser, responsiveDrawer, breackPoint);
+    var iconDisplay = hideMenuIconButton ? 'none' : 'inline-flex';
     var drawerWidth = width !== undefined ? width : 256;
     var drawerOnRight = openSecondary !== undefined ? openSecondary : false;
 
@@ -13641,7 +13643,10 @@ var ResponsiveAppBar = function (_Component) {
         width: 'auto',
         top: 0,
         left: 0
-      }, style)
+      }, style),
+      icon_button: {
+        display: iconDisplay
+      }
     };
 
     var appBarProps = _extends({
@@ -13654,7 +13659,7 @@ var ResponsiveAppBar = function (_Component) {
       _extends({}, appBarProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 60
         },
         __self: this
       }),
@@ -13663,22 +13668,22 @@ var ResponsiveAppBar = function (_Component) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 56
+            lineNumber: 61
           },
           __self: this
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_7_material_ui_IconButton___default.a,
-          { onTouchTap: toggleDrawerOpen, contrast: true, __source: {
+          { onTouchTap: toggleDrawerOpen, style: styles.icon_button, contrast: true, __source: {
               fileName: _jsxFileName,
-              lineNumber: 57
+              lineNumber: 62
             },
             __self: this
           },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8_material_ui_icons_Menu___default.a, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 58
+              lineNumber: 63
             },
             __self: this
           })
@@ -13699,7 +13704,6 @@ ResponsiveAppBar.propTypes = {
   breackPoint: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
   width: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number,
   openSecondary: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
-  showMenuIconButton: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
   onLeftIconButtonTouchTap: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func
 };
 
