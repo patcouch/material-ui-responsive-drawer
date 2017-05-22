@@ -13633,12 +13633,16 @@ var ResponsiveAppBar = function (_Component) {
 
     var styles = {
       docked_left: _extends({
-        position: 'relative',
-        width: 'auto'
+        position: 'fixed',
+        width: 'auto',
+        top: 0,
+        right: 0
       }, style),
       docked_right: _extends({
-        position: 'relative',
-        width: 'auto'
+        position: 'fixed',
+        width: 'auto',
+        top: 0,
+        left: 0
       }, style),
       icon_button: {
         display: iconDisplay
@@ -13655,7 +13659,7 @@ var ResponsiveAppBar = function (_Component) {
       _extends({}, appBarProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 60
         },
         __self: this
       }),
@@ -13664,7 +13668,7 @@ var ResponsiveAppBar = function (_Component) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57
+            lineNumber: 61
           },
           __self: this
         },
@@ -13672,14 +13676,14 @@ var ResponsiveAppBar = function (_Component) {
           __WEBPACK_IMPORTED_MODULE_7_material_ui_IconButton___default.a,
           { onTouchTap: toggleDrawerOpen, style: styles.icon_button, contrast: true, __source: {
               fileName: _jsxFileName,
-              lineNumber: 58
+              lineNumber: 62
             },
             __self: this
           },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8_material_ui_icons_Menu___default.a, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 59
+              lineNumber: 63
             },
             __self: this
           })
