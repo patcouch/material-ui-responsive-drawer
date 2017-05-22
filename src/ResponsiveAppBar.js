@@ -30,6 +30,12 @@ class ResponsiveAppBar extends Component {
     const drawerOnRight=openSecondary!==undefined?openSecondary:false;
 
     const styles={
+      docked_left: {
+        ...style
+      },
+      docked_right: {
+        ...style
+      },
       icon_button: {
         display: iconDisplay
       }

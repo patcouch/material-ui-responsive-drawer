@@ -47,6 +47,8 @@ var ResponsiveAppBar = function (_Component) {
     var drawerOnRight = openSecondary !== undefined ? openSecondary : false;
 
     var styles = {
+      docked_left: _extends({}, style),
+      docked_right: _extends({}, style),
       icon_button: {
         display: iconDisplay
       }
