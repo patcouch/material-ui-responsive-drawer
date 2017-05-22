@@ -48,12 +48,16 @@ var ResponsiveAppBar = function (_Component) {
 
     var styles = {
       docked_left: _extends({
-        position: 'relative',
-        width: 'auto'
+        position: 'fixed',
+        width: 'auto',
+        top: 0,
+        right: 0
       }, style),
       docked_right: _extends({
-        position: 'relative',
-        width: 'auto'
+        position: 'fixed',
+        width: 'auto',
+        top: 0,
+        left: 0
       }, style),
       icon_button: {
         display: iconDisplay

@@ -31,13 +31,17 @@ class ResponsiveAppBar extends Component {
 
     const styles={
       docked_left: {
-        position: 'relative',
+        position: 'fixed',
         width: 'auto',
+        top:0,
+        right: 0,
         ...style
       },
       docked_right: {
-        position: 'relative',
+        position: 'fixed',
         width: 'auto',
+        top:0,
+        left:0,
         ...style
       },
       icon_button: {
