@@ -1,5 +1,5 @@
 /*!
- * material-ui-responsive-drawer v1.1.23 - https://tarikhuber.github.io/material-ui-responsive-drawer
+ * material-ui-responsive-drawer v1.1.24 - https://tarikhuber.github.io/material-ui-responsive-drawer
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -13636,13 +13636,15 @@ var ResponsiveAppBar = function (_Component) {
         position: 'fixed',
         width: 'auto',
         top: 0,
-        right: 0
+        right: 0,
+        height: 54
       }, style),
       docked_right: _extends({
         position: 'fixed',
         width: 'auto',
         top: 0,
-        left: 0
+        left: 0,
+        height: 54
       }, style),
       icon_button: {
         display: iconDisplay
@@ -13659,7 +13661,7 @@ var ResponsiveAppBar = function (_Component) {
       _extends({}, appBarProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 62
         },
         __self: this
       }),
@@ -13668,7 +13670,7 @@ var ResponsiveAppBar = function (_Component) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 61
+            lineNumber: 63
           },
           __self: this
         },
@@ -13676,14 +13678,14 @@ var ResponsiveAppBar = function (_Component) {
           __WEBPACK_IMPORTED_MODULE_7_material_ui_IconButton___default.a,
           { onTouchTap: toggleDrawerOpen, style: styles.icon_button, contrast: true, __source: {
               fileName: _jsxFileName,
-              lineNumber: 62
+              lineNumber: 64
             },
             __self: this
           },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8_material_ui_icons_Menu___default.a, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 63
+              lineNumber: 65
             },
             __self: this
           })
