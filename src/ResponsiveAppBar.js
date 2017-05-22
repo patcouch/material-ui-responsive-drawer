@@ -35,6 +35,7 @@ class ResponsiveAppBar extends Component {
         width: 'auto',
         top:0,
         right: 0,
+        height: 54,
         ...style
       },
       docked_right: {
@@ -42,6 +43,7 @@ class ResponsiveAppBar extends Component {
         width: 'auto',
         top:0,
         left:0,
+        height: 54,
         ...style
       },
       icon_button: {
